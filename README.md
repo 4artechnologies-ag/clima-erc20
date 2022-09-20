@@ -59,12 +59,11 @@ The `burnFrom` function destroys `amount` tokens from account `from`, reducing t
 
 All these methods fire the `Transfer` event.
 
-## Erc-20 Modules in this example
+## Erc-20 Modules
 
 
 #### Pausable
 
 Contract module which allows children to implement an emergency stop mechanism that can be triggered by an authorized account.
-
-In this example, only the pauser account can trigger call `pause` and `unpause` methods.
+only the pauser account can trigger call `pause` and `unpause` methods.
 
