@@ -2,6 +2,11 @@
 
 This is an ERC-20 token in solidity language of an ERC-20 standard Ethereum , mintable and burnable, with minter,admin, access permissions and pausable module.
 
+https://goerli.etherscan.io/address/0x2b47feb3e7e206a31a4ce38e8c17acdb73988bd0#code
+Name:  ClimaCoin
+Symbol: CC
+TotalCap: 2208740668
+
 ## Erc-20 implementation
 
 ERC-20 is a standard interface for tokens.
