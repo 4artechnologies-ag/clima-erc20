@@ -2,10 +2,10 @@
 
 This is an ERC-20 token in solidity language of an ERC-20 standard Ethereum , mintable and burnable, with minter,admin, access permissions and pausable module.
 
-https://goerli.etherscan.io/address/0x2b47feb3e7e206a31a4ce38e8c17acdb73988bd0#code
-Name:  ClimaCoin
-Symbol: CC
-TotalCap: 2208740668
+### https://goerli.etherscan.io/address/0x2b47feb3e7e206a31a4ce38e8c17acdb73988bd0#code
+###Name:     ClimaCoin
+###Symbol:   CC
+###TotalCap: 2208740668
 
 ## Erc-20 implementation
 
@@ -26,37 +26,34 @@ The `constructor` function sets `name`, `symbol`, `decimals` and `totalCap` of t
 
 #### Balance
 
-The view function `balanceOf` returns the account balance of an account `_owner`.
+The view function `balanceOf` returns the account balance of an account.
  
 #### Allowance
 
-The view function `allowance` returns the amount which address `_spender` is allowed to spend from another account - `_owner`.
+The view function `allowance` returns the amount which address `spender` is allowed to spend from another account - `owner`.
 
 #### Transfer and Transfer From
 
 The method `transfer` is called by `msg.sender` account and transfers `_value` amount of tokens to another address `_to`.
 
-The method `transferFrom` allows one third account `msg.sender` transfers `_value` amount of tokens from other address `_from` to other address `_to`. The `_from` address needs to approve `msg.sender` spend the `_value` first.
+The method `transferFrom` allows one third account `msg.sender` transfers `amount` amount of tokens from other address `from` to other address `to`. The `from` address needs to approve `msg.sender` spend the `amount` first.
 
 Both methods fire the `Transfer` event.
 
 #### Approve
 
-The method `approve` allows one account - `_spender` - to spend from another account - `msg.sender` - the `_amount`.
+The method `approve` allows one account - `spender` - to spend from another account - `msg.sender` - the `amount`.
  
 #### Increase Approval and Decrease Approval
  
-Those methods are not a ERC-20 standard but can be used to manage the value of the allowances.
 
-The method `increaseApproval` allows another account - `_spender` - to spend from another account - `msg.sender` - adding to current allowance the `_addedValue` amount.
+The method `increaseApproval` allows another account - `spender` - to spend from another account - `msg.sender` - adding to current allowance the `addedValue` amount.
 
-The method `decreaseApproval` reduces the value approved to `_spender` to spend from another account - `msg.sender` - subtracting the `_subtractedValue` from the current approval amount. If the `_subtractedValue` is bigger than current approval the value will reduce to 0.
+The method `decreaseApproval` reduces the value approved to `spender` to spend from another account - `msg.sender` - subtracting the `subtractedValue` from the current approval amount. If the `subtractedValue` is bigger than current approval the value will reduce to 0.
 
 #### Mint, Burn and Burn From
 
-Those methods are not a ERC-20 standard but are commonly used to create and destroy tokens.
-
-The `mint` function creates `amount` tokens and assigns them to account `to`, increasing the total supply. Only the smart contract owner can mint.
+The `mint` function creates `amount` tokens and assigns them to account `to`, increasing the total supply. Only the user with minter role can mint.
 
 The `burn` function destroys `amount` tokens from `msg.sender`, reducing the total supply.
 
@@ -78,4 +75,4 @@ olny the admin accont can trigger call `grantRole`, `getRoleAdmin`, `revokeRole`
 
 ### Cap 
 contract module which will allow the authorized account to set the total supply of the token.
-anyone account can trigger call `cap` methods.
+anyone account can trigger call `cap` methods to get the value in cap.
