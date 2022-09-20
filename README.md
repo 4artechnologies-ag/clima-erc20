@@ -35,7 +35,7 @@ The view function `allowance` returns the amount which address `spender` is allo
 
 #### Transfer and Transfer From
 
-The method `transfer` is called by `msg.sender` account and transfers `_value` amount of tokens to another address `_to`.
+The method `transfer` is called by `msg.sender` account and transfers `amount` amount of tokens to another address `to`.
 
 The method `transferFrom` allows one third account `msg.sender` transfers `amount` amount of tokens from other address `from` to other address `to`. The `from` address needs to approve `msg.sender` spend the `amount` first.
 
