@@ -72,3 +72,10 @@ All these methods fire the `Transfer` event.
 Contract module which allows children to implement an emergency stop mechanism that can be triggered by an authorized account.
 only the pauser account can trigger call `pause` and `unpause` methods.
 
+### Access Control Roles
+contract module which will assign access roles to different users by authorized account.
+olny the admin accont can trigger call `grantRole`, `getRoleAdmin`, `revokeRole`, amd `hasRole` methods.
+
+### Cap 
+contract module which will allow the authorized account to set the total supply of the token.
+anyone account can trigger call `cap` methods.
